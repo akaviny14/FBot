@@ -9,7 +9,6 @@ from langchain.prompts import ChatPromptTemplate
 
 from loaders import *
 
-
 TIPOS_ARQUIVOS_VALIDOS = [
     'Site', 'Youtube', 'Pdf', 'Csv', 'Txt'
 ]
@@ -50,7 +49,7 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     documento = carrega_arquivos(tipo_arquivo, arquivo)
 
     system_message = '''Você é um assistente amigável chamado FrappaBOT.
-    Você é um assistente para a empresa Frappa e é responsável por atender clientes com dúvidas em relação a produtos e serviços da Frappa.
+    Você é um assistente consultor para a empresa Frappa e é responsável por atender clientes com dúvidas em relação a produtos e serviços da Frappa.
     Você possui acesso às seguintes informações vindas 
     de um documento {}: 
 
@@ -78,7 +77,7 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     st.session_state['chain'] = chain
 
 def pagina_chat():
-    st.header('🤖Bem-vindo ao FrappaBOT', divider=True)
+    st.header('🤖Bem-vindo ao Oráculo', divider=True)
 
     chain = st.session_state.get('chain')
     if chain is None:
