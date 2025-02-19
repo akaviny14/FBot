@@ -48,8 +48,8 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
 
     documento = carrega_arquivos(tipo_arquivo, arquivo)
 
-    system_message = '''Você é um assistente amigável chamado FrappaBOT.
-    Você é um assistente consultor para a empresa Frappa e é responsável por atender clientes com dúvidas em relação a produtos e serviços da Frappa.
+    system_message = '''Você é um assistente amigável chamado FrapaBOT.
+    Você é um assistente consultor para a empresa Grupo Frapa e é responsável por atender clientes com dúvidas em relação a produtos e serviços da Frappa.
     Você possui acesso às seguintes informações vindas 
     de um documento {}: 
 
