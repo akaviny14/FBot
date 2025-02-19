@@ -9,16 +9,6 @@ from langchain.prompts import ChatPromptTemplate
 
 from loaders import *
 
-st.markdown(
-    """
-    <style>
-        body {
-            zoom: 1.1; /* Ajuste o valor para aumentar ou diminuir a escala */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 TIPOS_ARQUIVOS_VALIDOS = [
     'Site', 'Youtube', 'Pdf', 'Csv', 'Txt'
