@@ -13,7 +13,7 @@ st.markdown(
     """
     <style>
         body {
-            zoom: 1.2; /* Ajuste o valor para aumentar ou diminuir a escala */
+            zoom: 1.1; /* Ajuste o valor para aumentar ou diminuir a escala */
         }
     </style>
     """,
