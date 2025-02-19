@@ -62,7 +62,7 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     Sempre que houver $ na sua saída, substita por S.
 
     Se a informação do documento for algo como "Just a moment...Enable JavaScript and cookies to continue" 
-    sugira ao usuário carregar novamente o Oráculo!'''.format(tipo_arquivo, documento)
+    sugira ao usuário carregar novamente o FrapaBot!'''.format(tipo_arquivo, documento)
 
     print(system_message)
 
@@ -77,11 +77,11 @@ def carrega_modelo(provedor, modelo, api_key, tipo_arquivo, arquivo):
     st.session_state['chain'] = chain
 
 def pagina_chat():
-    st.header('🤖Bem-vindo ao Oráculo', divider=True)
+    st.header('🤖Bem-vindo ao FrapaBot', divider=True)
 
     chain = st.session_state.get('chain')
     if chain is None:
-        st.error('Carrege o Oráculo')
+        st.error('Carrege o Bot')
         st.stop()
 
     memoria = st.session_state.get('memoria', MEMORIA)
@@ -89,7 +89,7 @@ def pagina_chat():
         chat = st.chat_message(mensagem.type)
         chat.markdown(mensagem.content)
 
-    input_usuario = st.chat_input('Fale com o oráculo')
+    input_usuario = st.chat_input('Fale com o FrapaBot')
     if input_usuario:
         chat = st.chat_message('human')
         chat.markdown(input_usuario)
